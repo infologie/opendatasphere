@@ -1,32 +1,32 @@
 @charset "UTF-8";
 body, button {
-  font-family: 'Roboto-Light', sans-serif;
-  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-style: normal; }
 
 .btn-group::after, .fiche__titre {
-  font-family: 'Roboto-Light', sans-serif;
-  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   font-style: normal; }
 
 h2,
 h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche__cle, .connexions__libelle, .search-box__input, .command-board__btn {
-  font-family: 'Syne-Regular', monospace;
+  font-family: 'Syne', sans-serif;
   font-weight: normal;
   font-style: normal; }
 
 .title-site {
-  font-family: 'Syne-Regular', monospace;
+  font-family: 'Lineal', sans-serif;
   font-weight: normal;
   font-style: normal; }
 
 .title-site__bold, .lang-box__flag--active, .navigation__link--active {
-  font-family: 'Syne-Regular', monospace;
-  font-weight: bold;
+  font-family: 'Syne', sans-serif;
+  font-weight: normal;
   font-style: normal; }
 
 .fiche__label, .search-list li, .card__label {
-  font-family: 'Roboto-Light', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-style: normal; }
 
@@ -37,37 +37,25 @@ h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: 'Roboto';
   src: url("./font/Roboto-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Roboto-Light';
-  src: url("./font/Roboto-Light.woff") format("woff");
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url("./font/Roboto-Light.woff") format("woff");
+  font-family: 'Roboto';
+  src: url("./font/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto';
   src: url("./font/Roboto-Light.woff") format("woff");
   font-weight: 500;
   font-style: normal;}
 
 @font-face {
-  font-family: 'Syne-Regular';
-  src: url("./font/Syne-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;}
-
-@font-face {
-  font-family: 'Syne-Regular';
+  font-family: 'Syne';
   src: url("./font/Syne-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;}
