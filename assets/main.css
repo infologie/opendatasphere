@@ -9,7 +9,7 @@ body, button {
   font-weight: normal;
   font-style: normal; }
 
-.btn-group::after, .fiche__titre {
+.btn-group::after, .fiche__description_court {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -630,7 +630,7 @@ button:focus {
     margin: 0 0 5px 0;
     overflow-wrap: break-word;
     font-size: 20px; }
-  .card__titre {
+  .card__description_court {
     margin: 10px; }
 
 .overflow {

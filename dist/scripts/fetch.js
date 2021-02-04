@@ -21,9 +21,9 @@ Promise.all([
                     id: entite.id,
                     label: entite.label,
                     description_court: entite.description_court,
-                    group: entite.type,
+                    group: entite.categorie,
                     image: './assets/images/' + entite.image,
-                    categorie: entite.categorie,
+                    categorie: entite.type,
                     description_long: entite.description_long,
                     lien: entite.lien,
         

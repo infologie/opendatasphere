@@ -147,23 +147,21 @@
 
             <section class="toolbar || d-none d-xl-flex">
                 <div class="toolbar__section">
-                    <button class="btn-group" data-group="Personne" data-lang-fr="Personne" data-lang-en="">Personne</button>
-                    <button class="btn-group" data-group="Organisme public" data-lang-fr="Organisme public" data-lang-en="">Organisme public</button>
-                    <button class="btn-group" data-group="Organisme privé" data-lang-fr="Organisme privé" data-lang-en="">Organisme privé</button>
-                    <button class="btn-group" data-group="Outils" data-lang-fr="Outils" data-lang-en="">Outils</button>
-                </div>
-
-<!-- 
-                <div class="toolbar__section">
-                    <button class="btn-group" data-group="politique" data-lang-fr="politique" data-lang-en="">politique</button>
+                    <button class="btn-group" data-group="politique" data-lang-fr="politique" data-lang-en="">Politique</button>
                     <button class="btn-group" data-group="economie" data-lang-fr="Économie" data-lang-en="">Économie</button>
                     <button class="btn-group" data-group="legislatif" data-lang-fr="Législatif" data-lang-en="">Législatif</button>
-                    <button class="btn-group" data-group="geographie" data-lang-fr="Géographique" data-lang-en="">Géographique</button>
+                    <button class="btn-group" data-group="geographique" data-lang-fr="Géographique" data-lang-en="">Géographique</button>
                     <button class="btn-group" data-group="scientifique" data-lang-fr="Scientifique" data-lang-en="">Scientifique</button>
                     <button class="btn-group" data-group="technologie" data-lang-fr="Technologie" data-lang-en="">Technologie</button>
                 </div>
+                <div class="toolbar__section">
+<!-- 
+                    <button class="btn-group" data-group="personne" data-lang-fr="Personne" data-lang-en="">Personne</button>
+                    <button class="btn-group" data-group="organisme_public" data-lang-fr="Organisme public" data-lang-en="">Organisme public</button>
+                    <button class="btn-group" data-group="organisme_prive" data-lang-fr="Organisme privé" data-lang-en="">Organisme privé</button>
+                    <button class="btn-group" data-group="outil" data-lang-fr="Outils" data-lang-en="">Outils</button>
  -->
-
+                </div>
             </section>
         </div>
 
@@ -264,9 +262,9 @@
                     <div class="fiche__text-resume">
                         <span id="fiche-meta-label" class="fiche__label"></span>
                         <div id="fiche-meta-date"></div>
-                        <div id="fiche-meta-titre" class="fiche__titre"></div>
+                        <div id="fiche-meta-description_court" class="fiche__description_court"></div>
                         <div class="d-flex justify-content-between">
-                            <a id="fiche-lien" class="fiche__lien" title="Page wikipédia liée" target="_blank" href=""></a>
+                            <a id="fiche-meta-lien" class="fiche__lien" title="Page wikipédia liée" target="_blank" href=""></a>
                             <button id="fiche-permalien" class="fiche__permalien" data-lang-fr="Permalien" data-lang-en="">Permalien</button>
                         </div>
                     </div>
@@ -314,43 +312,22 @@
                     <div class="about__texte || col-md-6">
                         <h2 data-lang-fr="À propos" data-lang-en="">À propos</h2>
 
-                        <p
-                            data-lang-fr="L’Otletosphère est une cartographie relationnelle de l'open Data francophone. Elle cherche à mettre en visibilité la forte implication de Paul Otlet au sein des organisations pacifistes internationales ainsi qu'au sein des institutions bibliographiques et documentaires. La mise en oeuvre de ses projets pacifistes, documentaires, féministes lui a permis de côtoyer de nombreuses personnalités scientifiques et artistiques avec lesquelles il a pu entretenir des correspondances, se lier d'amitié, ou collaborer. Ces relations sont souvent connues ou attestées par l'examen des archives du Mundaneum."
-                            data-lang-en="">
-                        L’Otletosphère est une cartographie relationnelle de l'open Data francophone. Elle cherche à mettre en visibilité la forte implication de Paul Otlet au sein des organisations pacifistes internationales ainsi qu'au sein des institutions bibliographiques et documentaires. La mise en oeuvre de ses projets pacifistes, documentaires, féministes lui a permis de côtoyer de nombreuses personnalités scientifiques et artistiques avec lesquelles il a pu entretenir des correspondances, se lier d'amitié, ou collaborer. Ces relations sont souvent connues ou attestées par l'examen des archives du Mundaneum.</p>
+                        <p>L’OpenDataSphère a pour but de représenter des données sous forme de réseau interactif, dans une page Web, sur la thématique de l’open data francophone.</p>
 
-                        <p
-                            data-lang-fr="À l’exception des images, les contenus de ce site sont sous licence <a href='https://creativecommons.org/licenses/by/2.0/fr/' target='_blank'>Creative Commons Attribution</a>. CC BY HyperOtlet (Clément Borel, Guillaume Brioudes, Jean David, Olivier Le Deuff et Arthur Perret)"
-                            data-lang-en=""
-                        >À l’exception des images, les contenus de ce site sont sous licence <a href="https://creativecommons.org/licenses/by/2.0/fr/" target="_blank">Creative Commons Attribution</a>. CC BY HyperOtlet (Clément Borel, Guillaume Brioudes, Jean David, Olivier Le Deuff et Arthur Perret)</p>
+                        <p>Ce projet s’inscrit dans le cadre d’un cours sur l’archivage et le partage des données de la LP MIND. Il a été réalisé sur trois journées : l’enjeu était de réutiliser en accéléré le code et l’architecture du projet Otletosphère, et de constituer un nouveau jeu de données venant habiter cette structure. La thématique de l’open data francophone étant très vaste, cette réalisation se concentre sur les grands acteurs.</p>
+                        
+                        <p>À l’exception des images, les contenus de ce site sont sous licence Creative Commons Attribution. CC BY Arthur Perret, LP MIND, HyperOtlet 2021.</p>
+                        
+                        <p>LP MIND 2020-2021 : Florian Bucher, Aurélien Chaix-Renou, Zoé Dorizy, Mathilde Fernandez, Marie Ganter, Emma Hermet, Sophie Metsemaker, Naxan Sewduth, Aurore Quagiotto, Blandine Serre, Marine Vanderplaetsen.</p>
 
-                        <h3
-                            data-lang-fr="Manuel d'utilisation"
-                            data-lang-en=""
-                        >Manuel d'utilisation</h3>
-
-                        <p>
-                            <strong
-                                data-lang-fr="Le manuel d'utilisation est disponible à l'adresse suivante :  <a href='https://hyperotlet.github.io/otletosphere/'>https://hyperotlet.github.io/otletosphere/</a>"
-                                data-lang-en=""
-                            >Le manuel d'utilisation est disponible à l'adresse suivante :  <a href="https://hyperotlet.github.io/otletosphere/">https://hyperotlet.github.io/otletosphere/</a></strong></p>
                         <h3
                             data-lang-fr="Liens"
                             data-lang-en=""
                         >Liens</h3>
                         <ul>
-                            <li
-                                data-lang-fr="Carnet de recherche : <a href='https://hyperotlet.hypotheses.org/'>https://hyperotlet.hypotheses.org/</a>"
-                                data-lang-en=""
-                            >Carnet de recherche : <a href="https://hyperotlet.hypotheses.org/">https://hyperotlet.hypotheses.org/</a></li>
-                            <li
-                                data-lang-fr="Compte Twitter : <a href='https://twitter.com/hyperotlet'>https://twitter.com/hyperotlet</a>"
-                                data-lang-fr="Twitter account : <a href='https://twitter.com/hyperotlet'>https://twitter.com/hyperotlet</a>"
-                            >Compte Twitter : <a href="https://twitter.com/hyperotlet">https://twitter.com/hyperotlet</a></li>
-                            <li
-                                data-lang-fr="Frise chronologique interactive sur Paul Otlet : <a href='http://hyperotlet.huma-num.fr/timeline.html'>http://hyperotlet.huma-num.fr/timeline.html</a>"
-                                data-lang-en=""
-                            >Frise chronologique interactive sur Paul Otlet : <a href="http://hyperotlet.huma-num.fr/timeline.html">http://hyperotlet.huma-num.fr/timeline.html</a></li>
+                        	<li>Manuel d'utilisation : <a href="https://hyperotlet.github.io/otletosphere/">https://hyperotlet.github.io/otletosphere/</a></li>
+													<li>Article sur le projet :</li>
+													<li>Guillaume Brioudes, Arthur Perret, Olivier Le Deuff, & Clément Borel. (2020). Otletosphère (Version 2.0.0). Zenodo. <a href="http://doi.org/10.5281/zenodo.3981189">http://doi.org/10.5281/zenodo.3981189</a></li>
                         </ul>
 
                         <div class="about__logo-list">

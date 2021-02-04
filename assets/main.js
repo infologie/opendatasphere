@@ -151,9 +151,9 @@ Promise.all([
                     id: entite.id,
                     label: entite.label,
                     description_court: entite.description_court,
-                    group: entite.type,
+                    group: entite.categorie,
                     image: './assets/images/' + entite.image,
-                    categorie: entite.categorie,
+                    categorie: entite.type,
                     description_long: entite.description_long,
                     lien: entite.lien,
         
@@ -547,10 +547,16 @@ var network = {
             }
         },
         groups: {
-            personne: {shape: 'image', color: {border: chooseColor('personne')}},
-            organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
-            organisme_prive: {shape: 'image', color: {border: chooseColor('organisme_prive')}},
-            outil: {shape: 'image', color: {border: chooseColor('opposant')}}
+        		politique: {shape: 'circularImage', color: {border: chooseColor('politique')}},
+        		economie: {shape: 'circularImage', color: {border: chooseColor('economie')}},
+        		legislatif: {shape: 'circularImage', color: {border: chooseColor('legislatif')}},
+        		geographique: {shape: 'circularImage', color: {border: chooseColor('geographique')}},
+        		scientifique: {shape: 'circularImage', color: {border: chooseColor('scientifique')}},
+        		technologie: {shape: 'circularImage', color: {border: chooseColor('technologie')}}
+            //personne: {shape: 'image', color: {border: chooseColor('personne')}},
+            //organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
+            //organisme_prive: {shape: 'image', color: {border: chooseColor('organisme_prive')}},
+            //outil: {shape: 'image', color: {border: chooseColor('outil')}}
         },
         interaction: {hover:true}
     },
@@ -602,10 +608,10 @@ var network = {
                 network.data.nodes.map(entite => ({
                     id: entite.id,
                     color: chooseColor(entite.group, true),
-                    opacity: 0.4,
+                    opacity: 1,
                     font: {
-                        color: 'rgba(255, 255, 255, 0.5)',
-                        strokeColor: 'rgba(0, 0, 0, 0.5)'
+                        color: 'rgba(255, 255, 255, 1)',
+                        strokeColor: 'rgba(0, 0, 0, 1)'
                     }
                 } ), {
                     filter: function(entite) {
@@ -673,16 +679,28 @@ var network = {
 
 function chooseColor(relationEntite, lowerOpacity = false) {
     switch (relationEntite) {
-        case 'personne':
+        case 'politique':
             var color = '154, 60, 154'; break;
-        case 'organisme_public':
+        case 'economie':
             var color = '97, 172, 97'; break;
-        case 'organisme_prive':
+        case 'legislatif':
             var color = '250, 128, 114'; break;
-        case 'outil':
+        case 'geographique':
             var color = '102, 179, 222'; break;
+        case 'scientifique':
+            var color = '244, 164, 96'; break;
+        case 'technologie':
+            var color = '128,128,128'; break;
+     //case 'personne':
+     //    var color = '154, 60, 154'; break;
+     //case 'organisme_public':
+     //    var color = '97, 172, 97'; break;
+     //case 'organisme_prive':
+     //    var color = '250, 128, 114'; break;
+     //case 'outil':
+     //    var color = '102, 179, 222'; break;
     }
-    if (lowerOpacity) { return ['rgba(', color, ', 0.4)'].join(''); }
+    if (lowerOpacity) { return ['rgba(', color, ', 1)'].join(''); }
     else { return ['rgb(', color, ')'].join(''); }
 }
 
