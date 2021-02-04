@@ -25,15 +25,10 @@ var network = {
             }
         },
         groups: {
-            collegue: {shape: 'circularImage', color: {border: chooseColor('collegue')}},
-            collaborateur: {shape: 'circularImage', color: {border: chooseColor('collaborateur')}},
-            famille: {shape: 'circularImage', color: {border: chooseColor('famille')}},
-            opposant: {shape: 'circularImage', color: {border: chooseColor('opposant')}},
-            otlet: {shape: 'circularImage', color: {border: chooseColor('otlet')}},
-            'non-catégorisé': {shape: 'circularImage', color: {border: chooseColor('non-catégorisé')}},
-            institution: {shape: 'image', color: {border: chooseColor('institution')}},
-            œuvre: {shape: 'image', color: {border: chooseColor('œuvre')}},
-            évènement: {shape: 'image', color: {border: chooseColor('évènement')}}
+            personne: {shape: 'image', color: {border: chooseColor('personne')}},
+            organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
+            organisme_prive: {shape: 'image', color: {border: chooseColor('organisme_prive')}},
+            outil: {shape: 'image', color: {border: chooseColor('opposant')}}
         },
         interaction: {hover:true}
     },
@@ -156,24 +151,14 @@ var network = {
 
 function chooseColor(relationEntite, lowerOpacity = false) {
     switch (relationEntite) {
-        case 'collegue':
+        case 'personne':
             var color = '154, 60, 154'; break;
-        case 'collaborateur':
+        case 'organisme_public':
             var color = '97, 172, 97'; break;
-        case 'opposant':
+        case 'organisme_prive':
             var color = '250, 128, 114'; break;
-        case 'famille':
+        case 'outil':
             var color = '102, 179, 222'; break;
-        case 'otlet':
-            var color = '244, 164, 96'; break;
-        case 'non-catégorisé':
-            var color = '128,128,128'; break;
-        case 'institution':
-            var color = '128,128,128'; break;
-        case 'œuvre':
-            var color = '128,128,128'; break;
-        case 'évènement':
-            var color = '128,128,128'; break;
     }
     if (lowerOpacity) { return ['rgba(', color, ', 0.4)'].join(''); }
     else { return ['rgb(', color, ')'].join(''); }

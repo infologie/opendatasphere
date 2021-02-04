@@ -1,33 +1,33 @@
 @charset "UTF-8";
-body, button {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-style: normal; }
-
-.btn-group::after, .fiche__titre {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-style: normal; }
-
-h2,
-h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche__cle, .connexions__libelle, .search-box__input, .command-board__btn {
-  font-family: 'Syne', sans-serif;
-  font-weight: normal;
-  font-style: normal; }
-
 .title-site {
   font-family: 'Lineal', sans-serif;
   font-weight: normal;
   font-style: normal; }
 
+body, button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.btn-group::after, .fiche__titre {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+h2,
+h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche__cle, .connexions__libelle, .search-box__input, .command-board__btn {
+  font-family: 'Syne', monospace;
+  font-weight: normal;
+  font-style: normal; }
+
 .title-site__bold, .lang-box__flag--active, .navigation__link--active {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne', monospace;
   font-weight: normal;
   font-style: normal; }
 
 .fiche__label, .search-list li, .card__label {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal; }
 
 .lateral, .btn-group, .entete, .fiche__img, .search-box__input, .card, .card__img {
@@ -38,33 +38,33 @@ h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche
 
 @font-face {
   font-family: 'Roboto';
-  src: url("./font/Roboto-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("./fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("./font/Roboto-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  src: url("./fonts/Roboto-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("./font/Roboto-Light.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;}
+  src: url("./fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
 
 @font-face {
   font-family: 'Syne';
-  src: url("./font/Syne-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;}
+  src: url("./fonts/Syne-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
 
 @font-face {
   font-family: 'Lineal';
-  src: url("./font/Lineal.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;}
+  src: url("./fonts/Lineal.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
 
 @-webkit-keyframes valid {
   0% {
@@ -252,12 +252,12 @@ button:focus {
   .entete__identite {
     cursor: pointer;
     display: flex;
-    margin-bottom: 10px; }
+    margin-bottom: 5px; }
 
 .title-site {
   margin: unset;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  font-size: 2.5em;
+  line-height: 1; }
 
 .lang-box {
   display: flex; }
@@ -372,7 +372,7 @@ button:focus {
   padding-bottom: 7px;
   margin-bottom: 10px; }
 
-.fiche__wiki-link {
+.fiche__lien {
   margin-top: 15px;
   width: 30px;
   height: 30px;
@@ -383,7 +383,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px; }
-  .fiche__wiki-link--visible {
+  .fiche__lien--visible {
     display: flex; }
 
 .fiche__couple {
@@ -518,7 +518,6 @@ button:focus {
     border: unset;
     width: 50px;
     height: 50px;
-    -webkit-filter: drop-shadow(0px 0px 10px rgba(66, 66, 66, 0.5));
     filter: drop-shadow(0px 0px 10px rgba(66, 66, 66, 0.5)); }
     .network__btn--right {
       right: 15px;

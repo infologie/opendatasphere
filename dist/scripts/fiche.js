@@ -6,14 +6,12 @@ var fiche = {
     toggle: document.querySelector('#fiche-toggle'),
     isOpen: false,
     fields: {
-        wikiLink: document.querySelector('#fiche-wiki-link'),
+        lien: document.querySelector('#fiche-meta-lien'),
         img: document.querySelector('#fiche-meta-img'),
         label: document.querySelector('#fiche-meta-label'),
-        date: document.querySelector('#fiche-meta-date'),
-        titre: document.querySelector('#fiche-meta-titre'),
-        pays: document.querySelector('#fiche-meta-pays'),
-        domaine: document.querySelector('#fiche-meta-domaine'),
-        description: document.querySelector('#fiche-meta-description'),
+        description_court: document.querySelector('#fiche-meta-description_court'),
+        categorie: document.querySelector('#fiche-meta-categorie'),
+        description_long: document.querySelector('#fiche-meta-description_long'),
         connexion: document.querySelector('#fiche-connexion'),
         permalien: document.querySelector('#fiche-permalien')
     },
@@ -42,34 +40,13 @@ var fiche = {
         this.fields.img.setAttribute('src', entitePhoto);
         this.fields.img.setAttribute('alt', 'photo de ' + entiteLabel);
     },
-    setDates: function(entiteDateNaissance, entiteDateMort) {
-        if (entiteDateNaissance === null && entiteDateMort === null) {
-            this.fields.date.innerHTML = '';
-            return;
-        }
-
-        let naissance = '';
-        let mort = '';
-
-        if (entiteDateNaissance !== null) {
-            naissance = '<div class="fiche__dates"><time class="" datetime="' 
-                + entiteDateNaissance + '">' + entiteDateNaissance + '</time>';
-        }
-
-        if (entiteDateMort !== null) {
-            mort = ' - <time  datetime="' + entiteDateMort + '">' +
-                entiteDateMort + '</time><div>';
-        }
-
-        this.fields.date.innerHTML = [naissance, mort].join('');
-    },
-    setWikiLink: function(wikiLink) {
-        if (wikiLink === null) {
-            this.fields.wikiLink.classList.remove('fiche__wiki-link--visible')
-            this.fields.wikiLink.setAttribute('href', '')
+    setLink: function(lien) {
+        if (lien === null) {
+            this.fields.lien.classList.remove('fiche__lien--visible')
+            this.fields.lien.setAttribute('href', '')
         } else {
-            this.fields.wikiLink.classList.add('fiche__wiki-link--visible')
-            this.fields.wikiLink.setAttribute('href', wikiLink)
+            this.fields.lien.classList.add('fiche__lien--visible')
+            this.fields.lien.setAttribute('href', lien)
         }
     },
     setMeta: function(meta, content) {
@@ -129,12 +106,12 @@ var fiche = {
                 historique.actualiser(connectedNode.id);
             });
 
-            if (connectedNode.title !== null) {
+            if (connectedNode.description_court !== null) {
                 listElt.addEventListener('mouseenter', (e) => {
                     overflow.classList.add('overflow--active');
                     overflow.style.left = e.pageX + 20 + 'px';
                     overflow.style.top = e.pageY - overflow.offsetHeight + 'px';
-                    overflow.textContent = connectedNode.title;
+                    overflow.textContent = connectedNode.description_court;
                 })
 
                 listElt.addEventListener('mouseout', () => {
@@ -153,13 +130,11 @@ var fiche = {
 
         // remplissage métadonnées
         this.setMeta(nodeMetas.label, this.fields.label);
-        this.setMeta(nodeMetas.title, this.fields.titre);
+        this.setMeta(nodeMetas.description_court, this.fields.description_court);
         this.setImage(nodeMetas.image, nodeMetas.label);
-        this.setDates(nodeMetas.annee_naissance, nodeMetas.annee_mort);
-        this.setWikiLink(nodeMetas.lien_wikipedia);
-        this.setMeta(nodeMetas.pays, this.fields.pays);
-        this.setMeta(nodeMetas.domaine, this.fields.domaine);
-        this.setMeta(nodeMetas.description, this.fields.description);
+        this.setLink(nodeMetas.lien);
+        this.setMeta(nodeMetas.categorie, this.fields.categorie);
+        this.setMeta(nodeMetas.description_long, this.fields.description_long);
         this.setPermaLink(network.selectedNode);
 
         this.setConnexion(nodeConnectedList);
