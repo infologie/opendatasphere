@@ -9,9 +9,9 @@ var fiche = {
         lien: document.querySelector('#fiche-meta-lien'),
         img: document.querySelector('#fiche-meta-img'),
         label: document.querySelector('#fiche-meta-label'),
-        description_court: document.querySelector('#fiche-meta-description_court'),
+        title: document.querySelector('#fiche-meta-title'),
         categorie: document.querySelector('#fiche-meta-categorie'),
-        description_long: document.querySelector('#fiche-meta-description_long'),
+        description: document.querySelector('#fiche-meta-description'),
         connexion: document.querySelector('#fiche-connexion'),
         permalien: document.querySelector('#fiche-permalien')
     },
@@ -106,12 +106,12 @@ var fiche = {
                 historique.actualiser(connectedNode.id);
             });
 
-            if (connectedNode.description_court !== null) {
+            if (connectedNode.title !== null) {
                 listElt.addEventListener('mouseenter', (e) => {
                     overflow.classList.add('overflow--active');
                     overflow.style.left = e.pageX + 20 + 'px';
                     overflow.style.top = e.pageY - overflow.offsetHeight + 'px';
-                    overflow.textContent = connectedNode.description_court;
+                    overflow.textContent = connectedNode.title;
                 })
 
                 listElt.addEventListener('mouseout', () => {
@@ -130,11 +130,11 @@ var fiche = {
 
         // remplissage métadonnées
         this.setMeta(nodeMetas.label, this.fields.label);
-        this.setMeta(nodeMetas.description_court, this.fields.description_court);
+        this.setMeta(nodeMetas.title, this.fields.title);
         this.setImage(nodeMetas.image, nodeMetas.label);
         this.setLink(nodeMetas.lien);
         this.setMeta(nodeMetas.categorie, this.fields.categorie);
-        this.setMeta(nodeMetas.description_long, this.fields.description_long);
+        this.setMeta(nodeMetas.description, this.fields.description);
         this.setPermaLink(network.selectedNode);
 
         this.setConnexion(nodeConnectedList);

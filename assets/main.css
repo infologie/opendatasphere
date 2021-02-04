@@ -9,7 +9,7 @@ body, button {
   font-weight: normal;
   font-style: normal; }
 
-.btn-group::after, .fiche__description_court {
+.btn-group::after, .fiche__title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -403,12 +403,12 @@ button:focus {
 .fiche__valeur {
   font-size: 18px; }
 
-.fiche__description_long {
+.fiche__description {
   margin-top: 20px;
   padding: 10px;
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5; }
-  .fiche__description_long::first-letter {
+  .fiche__description::first-letter {
     float: left;
     font-size: 50px;
     top: 50px;
@@ -639,7 +639,7 @@ div#fiche-connexion {
     margin: 0 0 5px 0;
     overflow-wrap: break-word;
     font-size: 20px; }
-  .card__description_court {
+  .card__title {
     margin: 10px; }
 
 .overflow {

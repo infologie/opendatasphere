@@ -20,11 +20,11 @@ Promise.all([
                     // entite metas
                     id: entite.id,
                     label: entite.label,
-                    description_court: entite.description_court,
+                    title: entite.title,
                     group: entite.categorie,
                     image: './assets/images/' + entite.image,
                     categorie: entite.type,
-                    description_long: entite.description_long,
+                    description: entite.description,
                     lien: entite.lien,
         
                     // node style
@@ -65,7 +65,7 @@ Promise.all([
                     id: lien.id,
                     from: lien.from,
                     to: lien.to,
-                    title: lien.Justification,
+                    title: lien.title,
                 };
 
                 if (lien.from == 1 || lien.to == 1) {

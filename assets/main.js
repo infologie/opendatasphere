@@ -11,7 +11,7 @@ var board = {
             card.id = entity.id;
             card.label = entity.label;
             card.labelFirstLetter = entity.sortName.charAt(0);
-            card.description_court = entity.description_court;
+            card.title = entity.title;
             card.img = entity.image;
 
             if (entity.hidden === false) {
@@ -27,7 +27,7 @@ function Card() {
     this.id = null;
     this.label = 'No name';
     this.labelFirstLetter = undefined;
-    this.description_court = 'No title';
+    this.title = 'No title';
     this.text = null;
     this.domElt = document.createElement('article');
 }
@@ -41,7 +41,7 @@ Card.prototype.inscribe = function(container) {
             <h3 class="card__label">${this.label}</h3>
         </div>
     </div>
-    <h4 class="card__titre">${this.description_court}</h4>`;
+    <h4 class="card__titre">${this.title}</h4>`;
 
     container.appendChild(this.domElt);
 
@@ -150,11 +150,11 @@ Promise.all([
                     // entite metas
                     id: entite.id,
                     label: entite.label,
-                    description_court: entite.description_court,
+                    title: entite.title,
                     group: entite.categorie,
                     image: './assets/images/' + entite.image,
                     categorie: entite.type,
-                    description_long: entite.description_long,
+                    description: entite.description,
                     lien: entite.lien,
         
                     // node style
@@ -195,7 +195,7 @@ Promise.all([
                     id: lien.id,
                     from: lien.from,
                     to: lien.to,
-                    title: lien.Justification,
+                    title: lien.title,
                 };
 
                 if (lien.from == 1 || lien.to == 1) {
@@ -223,9 +223,9 @@ var fiche = {
         lien: document.querySelector('#fiche-meta-lien'),
         img: document.querySelector('#fiche-meta-img'),
         label: document.querySelector('#fiche-meta-label'),
-        description_court: document.querySelector('#fiche-meta-description_court'),
+        title: document.querySelector('#fiche-meta-title'),
         categorie: document.querySelector('#fiche-meta-categorie'),
-        description_long: document.querySelector('#fiche-meta-description_long'),
+        description: document.querySelector('#fiche-meta-description'),
         connexion: document.querySelector('#fiche-connexion'),
         permalien: document.querySelector('#fiche-permalien')
     },
@@ -320,12 +320,12 @@ var fiche = {
                 historique.actualiser(connectedNode.id);
             });
 
-            if (connectedNode.description_court !== null) {
+            if (connectedNode.title !== null) {
                 listElt.addEventListener('mouseenter', (e) => {
                     overflow.classList.add('overflow--active');
                     overflow.style.left = e.pageX + 20 + 'px';
                     overflow.style.top = e.pageY - overflow.offsetHeight + 'px';
-                    overflow.textContent = connectedNode.description_court;
+                    overflow.textContent = connectedNode.title;
                 })
 
                 listElt.addEventListener('mouseout', () => {
@@ -344,11 +344,11 @@ var fiche = {
 
         // remplissage métadonnées
         this.setMeta(nodeMetas.label, this.fields.label);
-        this.setMeta(nodeMetas.description_court, this.fields.description_court);
+        this.setMeta(nodeMetas.title, this.fields.title);
         this.setImage(nodeMetas.image, nodeMetas.label);
         this.setLink(nodeMetas.lien);
         this.setMeta(nodeMetas.categorie, this.fields.categorie);
-        this.setMeta(nodeMetas.description_long, this.fields.description_long);
+        this.setMeta(nodeMetas.description, this.fields.description);
         this.setPermaLink(network.selectedNode);
 
         this.setConnexion(nodeConnectedList);
