@@ -15,7 +15,7 @@ body, button {
   font-style: normal; }
 
 h2,
-h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche__cle, .connexions__libelle, .search-box__input, .command-board__btn {
+h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche__label, .fiche__cle, .connexions__libelle, .search-box__input, .command-board__btn {
   font-family: 'Syne', monospace;
   font-weight: normal;
   font-style: normal; }
@@ -25,7 +25,7 @@ h3, .btn-group, .lang-box__flag, .lang-box__separator, .navigation__link, .fiche
   font-weight: normal;
   font-style: normal; }
 
-.fiche__label, .search-list li, .card__label {
+.search-list li, .card__label {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-style: normal; }
@@ -135,7 +135,7 @@ button:focus {
   position: absolute;
   width: 320px;
   top: 0px;
-  background-color: #fffcfb;
+  background-color: white;
   height: calc(100vh - 90px);
   z-index: 100;
   transition: transform .2s;
@@ -316,7 +316,7 @@ button:focus {
   overflow: auto;
   height: 100%;
   box-sizing: border-box;
-  padding: 10px;
+  /*         padding: 10px; */
   visibility: hidden; }
   .fiche__content--visible {
     visibility: visible; }
@@ -347,9 +347,12 @@ button:focus {
 
 .fiche__identite {
   margin-bottom: 10px;
-  display: flex; }
+  display: flex;
+  /*         color: white; */
+  /*         background-color: black; */ }
 
 .fiche__img {
+  display: none;
   cursor: pointer;
   border-radius: 2px;
   width: 150px;
@@ -359,7 +362,7 @@ button:focus {
   object-fit: cover; }
 
 .fiche__text-resume {
-  width: 150px; }
+  padding: 10px; }
 
 .fiche__label {
   display: inline-block;
@@ -389,7 +392,8 @@ button:focus {
 .fiche__couple {
   display: flex;
   align-items: center;
-  margin: 10px 0; }
+  margin: 10px 0;
+  padding: 10px; }
 
 .fiche__cle {
   font-size: 15px;
@@ -399,12 +403,12 @@ button:focus {
 .fiche__valeur {
   font-size: 18px; }
 
-.fiche__description {
+.fiche__description_long {
   margin-top: 20px;
-  padding: 15px 0;
+  padding: 10px;
   border-top: 1px solid #d5d5d5;
   border-bottom: 1px solid #d5d5d5; }
-  .fiche__description::first-letter {
+  .fiche__description_long::first-letter {
     float: left;
     font-size: 50px;
     top: 50px;
@@ -433,7 +437,8 @@ button:focus {
 .connexions__libelle {
   display: inline-block;
   margin-top: 20px;
-  font-size: 18px; }
+  font-size: 18px;
+  padding: 10px; }
 
 .connexions__list {
   list-style: none;
@@ -454,6 +459,9 @@ button:focus {
   margin-right: 7px;
   border-radius: 50%;
   transition: transform .1s; }
+
+div#fiche-connexion {
+  padding: 0 10px; }
 
 .search-box {
   position: relative; }
@@ -496,7 +504,7 @@ button:focus {
     cursor: pointer;
     font-size: 20px;
     padding: 5px;
-    background: #fffcfb;
+    background: white;
     border-top: 1px solid black; }
     .search-list li:hover {
       background-color: #ebebeb; }
@@ -618,11 +626,12 @@ button:focus {
     display: flex;
     margin-bottom: 20px; }
   .card__img {
-    width: 80px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: 3px 0 0 0; }
+    border-radius: 3px 0 0 0;
+    background-color: gray; }
   .card__identite {
     width: 120px;
     padding: 5px 0 0 10px; }

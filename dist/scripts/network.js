@@ -231,7 +231,7 @@ function switchNode(nodeId, mustZoom = true) {
     network.selectedNode = Number(nodeId);
 
     // renommer la page web
-    document.title = nodeMetas.label + ' - Otetosphère';
+    document.title = nodeMetas.label + ' - OpenDataSphère';
 
     if (mustZoom) {zoomToNode(nodeId);}
 

@@ -11,7 +11,7 @@ var board = {
             card.id = entity.id;
             card.label = entity.label;
             card.labelFirstLetter = entity.sortName.charAt(0);
-            card.title = entity.title;
+            card.description_court = entity.description_court;
             card.img = entity.image;
 
             if (entity.hidden === false) {
@@ -27,7 +27,7 @@ function Card() {
     this.id = null;
     this.label = 'No name';
     this.labelFirstLetter = undefined;
-    this.title = 'No title';
+    this.description_court = 'No title';
     this.text = null;
     this.domElt = document.createElement('article');
 }
@@ -41,7 +41,7 @@ Card.prototype.inscribe = function(container) {
             <h3 class="card__label">${this.label}</h3>
         </div>
     </div>
-    <h4 class="card__titre">${this.title}</h4>`;
+    <h4 class="card__titre">${this.description_court}</h4>`;
 
     container.appendChild(this.domElt);
 
