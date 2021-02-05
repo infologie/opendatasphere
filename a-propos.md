@@ -2,22 +2,16 @@
 title: À propos
 ---
 
-*Rédiger ici les éléments qui viendront remplacer le contenu de la section "À propos" du fichier* `index.html`
+L’OpenDataSphère a pour but de représenter des données sous forme de réseau interactif, dans une page Web, sur la thématique de l’open data francophone.
 
-<!--
+Ce projet s’inscrit dans le cadre d’un cours sur l’archivage et le partage des données de la LP MIND. Il a été réalisé sur trois journées : l’enjeu était de réutiliser en accéléré le code et l’architecture du projet Otletosphère, et de constituer un nouveau jeu de données venant habiter cette structure. La thématique de l’open data francophone étant très vaste, cette réalisation se concentre sur les grands acteurs.
 
-TEXTE ORIGINAL :
+À l’exception des images, les contenus de ce site sont sous licence Creative Commons Attribution. CC BY Arthur Perret, LP MIND, HyperOtlet 2021.
 
-L’Otletosphère est une cartographie relationnelle des personnalités et institutions liées à Paul Otlet. Elle cherche à mettre en visibilité la forte implication de Paul Otlet au sein des organisations pacifistes internationales ainsi qu'au sein des institutions bibliographiques et documentaires. La mise en oeuvre de ses projets pacifistes, documentaires, féministes lui a permis de côtoyer de nombreuses personnalités scientifiques et artistiques avec lesquelles il a pu entretenir des correspondances, se lier d'amitié, ou collaborer. Ces relations sont souvent connues ou attestées par l'examen des archives du Mundaneum.
+LP MIND 2020-2021 : Florian Bucher, Aurélien Chaix-Renou, Zoé Dorizy, Mathilde Fernandez, Marie Ganter, Emma Hermet, Sophie Metsemaker, Naxan Sewduth, Aurore Quagiotto, Blandine Serre, Marine Vanderplaetsen.
 
-À l’exception des images, les contenus de ce site sont sous licence Creative Commons Attribution. CC BY HyperOtlet (Clément Borel, Guillaume Brioudes, Jean David, Olivier Le Deuff et Arthur Perret)
+### Liens
 
-Manuel d'utilisation
-Le manuel d'utilisation est disponible à l'adresse suivante : https://hyperotlet.github.io/otletosphere/
-
-Liens
-Carnet de recherche : https://hyperotlet.hypotheses.org/
-Compte Twitter : https://twitter.com/hyperotlet
-Frise chronologique interactive sur Paul Otlet : http://hyperotlet.huma-num.fr/timeline.html
-
--->
+- Manuel d'utilisation : <https://hyperotlet.github.io/otletosphere/>
+- Article sur le projet :
+- Guillaume Brioudes, Arthur Perret, Olivier Le Deuff, & Clément Borel. (2020). Otletosphère (Version 2.0.0). Zenodo. <http://doi.org/10.5281/zenodo.3981189>
