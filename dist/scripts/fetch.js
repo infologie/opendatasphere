@@ -20,12 +20,16 @@ Promise.all([
                     // entite metas
                     id: entite.id,
                     label: entite.label,
-                    title: entite.title,
-                    group: entite.categorie,
-                    image: './assets/images/' + entite.image,
-                    categorie: entite.type,
+                    title: (entite.titre || ''),
+                    title_fr: (entite.titre || ''),
+                    group: entite.relation_otlet,
+                    image: './assets/photos/' + entite.photo,
+                    genre: entite.genre,
+                    domaine: entite.domaine,
+                    domaine_fr: entite.domaine,
                     description: entite.description,
-                    lien: entite.lien,
+                    description_fr: entite.description,
+                    lien_wikipedia: entite.lien_wikipedia,
         
                     // node style
                     size : 30,
@@ -35,7 +39,7 @@ Promise.all([
                     interaction: {hover: true},
                     hidden: false,
                     font: {
-                        face: 'Roboto',
+                        face: 'Open Sans',
                         size: 22,
                         color: '#fff',
                         strokeWidth: 2,
@@ -65,7 +69,9 @@ Promise.all([
                     id: lien.id,
                     from: lien.from,
                     to: lien.to,
-                    title: lien.title,
+                    title: lien.label,
+                    title_fr: lien.label,
+                    title_en: lien.label_en
                 };
 
                 if (lien.from == 1 || lien.to == 1) {
