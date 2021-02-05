@@ -25,11 +25,11 @@ var network = {
             }
         },
         groups: {
-        		politique: {shape: 'circularImage', color: {border: chooseColor('politique')}},
+        		public: {shape: 'circularImage', color: {border: chooseColor('public')}},
         		economie: {shape: 'circularImage', color: {border: chooseColor('economie')}},
-        		droit: {shape: 'circularImage', color: {border: chooseColor('droit')}},
-        		geographie: {shape: 'circularImage', color: {border: chooseColor('geographie')}},
-        		science: {shape: 'circularImage', color: {border: chooseColor('science')}},
+        		juridique: {shape: 'circularImage', color: {border: chooseColor('juridique')}},
+        		geographique: {shape: 'circularImage', color: {border: chooseColor('geographique')}},
+        		scientifique: {shape: 'circularImage', color: {border: chooseColor('scientifique')}},
         		technologie: {shape: 'circularImage', color: {border: chooseColor('technologie')}}
             //personne: {shape: 'image', color: {border: chooseColor('personne')}},
             //organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
@@ -157,18 +157,16 @@ var network = {
 
 function chooseColor(relationEntite, lowerOpacity = false) {
     switch (relationEntite) {
-        case 'politique':
+        case 'public':
             var color = '0,176,215'; break;
-        case 'economie':
+        case 'juridique':
             var color = '216,115,186'; break;
-        case 'droit':
-            var color = '216,189,74'; break;
-        case 'geographie':
+        case 'geographique':
             var color = '82,170,68'; break;
-        case 'science':
-            var color = '93,58,155'; break;
-        case 'technologie':
+        case 'scientifique':
             var color = '230,97,0'; break;
+        case 'autre':
+            var color = '128,128,128'; break;
      //case 'personne':
      //    var color = '154, 60, 154'; break;
      //case 'organisme_public':
