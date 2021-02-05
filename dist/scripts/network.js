@@ -158,17 +158,17 @@ var network = {
 function chooseColor(relationEntite, lowerOpacity = false) {
     switch (relationEntite) {
         case 'politique':
-            var color = '154, 60, 154'; break;
+            var color = '0,176,215'; break;
         case 'economie':
-            var color = '97, 172, 97'; break;
+            var color = '216,115,186'; break;
         case 'legislatif':
-            var color = '250, 128, 114'; break;
+            var color = '216,189,74'; break;
         case 'geographique':
-            var color = '102, 179, 222'; break;
+            var color = '82,170,68'; break;
         case 'scientifique':
-            var color = '244, 164, 96'; break;
+            var color = '93,58,155'; break;
         case 'technologie':
-            var color = '128,128,128'; break;
+            var color = '230,97,0'; break;
      //case 'personne':
      //    var color = '154, 60, 154'; break;
      //case 'organisme_public':
