@@ -1,6 +1,11 @@
 .toolbar {
     display: flex;
     justify-content: center;
+    
+    &__label {
+    	font-size: 1.2em;
+        align-self: center;
+    }
 
     &__section {
         display: flex;

@@ -548,11 +548,10 @@ var network = {
         },
         groups: {
         		public: {shape: 'circularImage', color: {border: chooseColor('public')}},
-        		economie: {shape: 'circularImage', color: {border: chooseColor('economie')}},
         		juridique: {shape: 'circularImage', color: {border: chooseColor('juridique')}},
         		geographique: {shape: 'circularImage', color: {border: chooseColor('geographique')}},
         		scientifique: {shape: 'circularImage', color: {border: chooseColor('scientifique')}},
-        		technologie: {shape: 'circularImage', color: {border: chooseColor('technologie')}}
+        		autre: {shape: 'circularImage', color: {border: chooseColor('autre')}}
             //personne: {shape: 'image', color: {border: chooseColor('personne')}},
             //organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
             //organisme_prive: {shape: 'image', color: {border: chooseColor('organisme_prive')}},

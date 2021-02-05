@@ -311,6 +311,9 @@ button:focus {
 .toolbar {
   display: flex;
   justify-content: center; }
+  .toolbar__label {
+    font-size: 1.2em;
+    align-self: center; }
   .toolbar__section {
     display: flex;
     margin: 0 10px; }
