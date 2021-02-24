@@ -10,17 +10,17 @@ Ce projet a été développé par les étudiants de la licence professionnelle M
 
 ### Définition de l’open data
 
-Les open data, ou données ouvertes, sont des données auxquelles l’accès est totalement public et libre de juridique, au même titre que l’exploitation et la réutilisation (source : [lebigdata.fr](https://www.lebigdata.fr/)).
+Les open data, ou données ouvertes, sont des données auxquelles l’accès est totalement public et libre de droit, au même titre que l’exploitation et la réutilisation (source : [lebigdata.fr](https://www.lebigdata.fr/)).
 
 Elles sont définies par [l’Open Knowledge Foundation](https://fr.okfn.org/) en 2005 selon trois critères : la disponibilité (accessibilité des données), la réutilisation (et la redistribution), et la participation universelle à celles-ci.
 
 ### Législation encadrant l’open data
 
-Même si l’article 15 de la Déclaration des Droits de l’Homme et du Citoyen de 1789 prévoit que “la Société a le juridique de demander compte à tout Agent public de son Administration”, les idées d’accès aux informations publiques et d’open data n’ont été pensées et développées que plus récemment  au sein de la législation française.
+Même si l’article 15 de la Déclaration des Droits de l’Homme et du Citoyen de 1789 prévoit que “la Société a le droit de demander compte à tout Agent public de son Administration”, les idées d’accès aux informations publiques et d’open data n’ont été pensées et développées que plus récemment  au sein de la législation française.
 
-C’est en 1978, avec la Loi CADA, que l’idée d’un “juridique de savoir” a été instaurée et que la Commission d'Accès aux Documents Administratifs a été créée. Ce juridique d’accès permet à tout citoyen de consulter les informations publiques détenues par les administrations.
+C’est en 1978, avec la Loi CADA, que l’idée d’un “droit de savoir” a été instaurée et que la Commission d'Accès aux Documents Administratifs a été créée. Ce droit d’accès permet à tout citoyen de consulter les informations publiques détenues par les administrations.
 
-Ce n’est qu’en 2015 que la question du juridique de réutilisation des données a été traitée dans le cadre de la Loi Valter. En effet, jusque-là, les citoyens pouvaient avoir accès aux informations publiques mais ne pouvaient pas les utiliser.
+Ce n’est qu’en 2015 que la question du droit de réutilisation des données a été traitée dans le cadre de la Loi Valter. En effet, jusque-là, les citoyens pouvaient avoir accès aux informations publiques mais ne pouvaient pas les utiliser.
 
 Une nouvelle étape a été passée en 2016 avec la Loi pour une République Numérique qui impose, par défaut, le principe d’ouverture des données. Ce principe d’ouverture est imposé à toutes les administrations et collectivités locales de plus de 3500 habitants et 50 agents ainsi qu’aux entreprises délégataires d’une mission de service public. Étant applicable par défaut, rares sont les données publiques qui n’y sont pas soumises (source : [Datactivist](https://datactivist.coop/ardeche/rapport/partie2.html)).
 
