@@ -10,6 +10,7 @@ var board = {
             var card = new Card;
             card.id = entity.id;
             card.label = entity.label;
+            card.color = chooseColor(entity.group);
             card.labelFirstLetter = entity.sortName.charAt(0);
             card.title = entity.title;
             card.img = entity.image;
@@ -28,6 +29,7 @@ function Card() {
     this.label = 'No name';
     this.labelFirstLetter = undefined;
     this.title = 'No title';
+    this.color = undefined;
     this.text = null;
     this.domElt = document.createElement('article');
 }
@@ -36,7 +38,7 @@ Card.prototype.inscribe = function(container) {
     this.domElt.classList.add('card');
     this.domElt.innerHTML = 
     `<div class="card__presentation">
-        <img class="card__img" src="${this.img}" alt="${this.label}">
+        <img class="card__img" src="${this.img}" alt="${this.label}" style="background-color: ${this.color};">
         <div class="card__identite">
             <h3 class="card__label">${this.label}</h3>
         </div>
@@ -220,6 +222,7 @@ var fiche = {
     toggle: document.querySelector('#fiche-toggle'),
     isOpen: false,
     fields: {
+        head: document.querySelector('#fiche-head'),
         lien: document.querySelector('#fiche-meta-lien'),
         img: document.querySelector('#fiche-meta-img'),
         label: document.querySelector('#fiche-meta-label'),
@@ -334,6 +337,9 @@ var fiche = {
             }
         }
     },
+    setColor: function(color) {
+        this.fields.head.style.backgroundColor = color;
+    },
     fill: function() {
         const nodeMetas = getNodeMetas(network.selectedNode)
         if (nodeMetas === false)  { return ; }
@@ -343,6 +349,7 @@ var fiche = {
         this.content.classList.add('fiche__content--visible');
 
         // remplissage métadonnées
+        this.setColor(chooseColor(nodeMetas.group));
         this.setMeta(nodeMetas.label, this.fields.label);
         this.setMeta(nodeMetas.title, this.fields.title);
         this.setImage(nodeMetas.image, nodeMetas.label);
@@ -389,7 +396,8 @@ var filter = {
                 if (isActiveGroup) {
                     network.data.nodes.get({
                         filter: function (item) {
-                            if (item.group == group) {
+                            console.log(item);
+                            if (item.group == group || item.categorie == group) {
                                 network.data.nodes.update({id: item.id, hidden: true}) }
                         }
                     });
@@ -402,7 +410,7 @@ var filter = {
                 } else {
                     network.data.nodes.get({
                         filter: function (item) {
-                            if (item.group == group) {
+                            if (item.group == group || item.categorie == group) {
                                 network.data.nodes.update({id: item.id, hidden: false}) }
                         }
                     });
@@ -540,6 +548,12 @@ var network = {
         },
         edges: {
             width: 2,
+            arrows: {
+                to: {
+                    enabled: true,
+                    scaleFactor: 1.5
+                }
+            },
             selectionWidth: 6,
             smooth: {
                 type: 'horizontal',
@@ -547,15 +561,11 @@ var network = {
             }
         },
         groups: {
-        		public: {shape: 'circularImage', color: {border: chooseColor('public')}},
-        		juridique: {shape: 'circularImage', color: {border: chooseColor('juridique')}},
-        		geographique: {shape: 'circularImage', color: {border: chooseColor('geographique')}},
-        		scientifique: {shape: 'circularImage', color: {border: chooseColor('scientifique')}},
-        		autre: {shape: 'circularImage', color: {border: chooseColor('autre')}}
-            //personne: {shape: 'image', color: {border: chooseColor('personne')}},
-            //organisme_public: {shape: 'image', color: {border: chooseColor('organisme_public')}},
-            //organisme_prive: {shape: 'image', color: {border: chooseColor('organisme_prive')}},
-            //outil: {shape: 'image', color: {border: chooseColor('outil')}}
+            public: {shape: 'circularImage', color: {border: chooseColor('public')}},
+            juridique: {shape: 'circularImage', color: {border: chooseColor('juridique')}},
+            geographique: {shape: 'circularImage', color: {border: chooseColor('geographique')}},
+            scientifique: {shape: 'circularImage', color: {border: chooseColor('scientifique')}},
+            autre: {shape: 'circularImage', color: {border: chooseColor('autre')}}
         },
         interaction: {hover:true}
     },
